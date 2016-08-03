@@ -79,6 +79,7 @@ celerybeat-schedule
 .env
 
 # virtualenv
+.venv/
 venv/
 ENV/
 
@@ -87,3 +88,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# django 셋팅 파일
+settings.ini
+# pycharm 셋팅
+.idea/
