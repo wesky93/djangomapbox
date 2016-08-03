@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # werkzeug 디버거를 위한 추가
     'django_extensions',
     'mapbox',
+    'leaflet',
 ]
 
 MIDDLEWARE_CLASSES = [
