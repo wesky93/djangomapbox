@@ -23,3 +23,7 @@ USER: <계정>
 PASSWORD: <비밀번호>
 HOST: <서버 주소>
 POST: <포트:3306>
+
+[mapbox]
+
+TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

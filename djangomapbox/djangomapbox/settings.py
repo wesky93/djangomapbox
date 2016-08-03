@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     # werkzeug 디버거를 위한 추가
     'django_extensions',
+    'mapbox',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -135,3 +136,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 디버깅 툴바(djdt) 설정
 INTERNAL_IPS = ['127.0.0.1','::1']
+
+# 맵박스 토큰
+MAPBOX_TOKEN = config.get('mapbox','MAPBOX_TOKEN')
