@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     # 디버깅 툴바
     'debug_toolbar',
     # werkzeug 디버거를 위한 추가
