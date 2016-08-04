@@ -5,22 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' />
     {% leaflet_js %}
     {% leaflet_css %}
+
+
 </head>
 <body>
-    {% leaflet_map "yourmap" %}
 
-    <div id='map' style='width: 400px; height: 300px;'></div>
-    <script>
-    mapboxgl.accessToken = '{{ token }}';
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/outdoors-v9'
-    });
+    {{ point }}
+    {{ center }}
+    <script type="text/javascript">
+        function main_map_init (map, options){
+            // 지도 중심점 지정
+            map.setView([{{ center.위도__avg }}, {{ center.경도__avg }}],12);
+            // 지도에 보여줄 마크 추가
+            {% for p in point %}
+                L.marker([{{ p.위도 }},{{ p.경도 }}]).bindPopup('{{ p.이름 }}').addTo(map);
+            {% endfor %}
+        }
     </script>
+    {% leaflet_map "main" callback="main_map_init" %}
 </body>
 </html>

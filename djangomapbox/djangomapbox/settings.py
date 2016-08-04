@@ -141,3 +141,12 @@ INTERNAL_IPS = ['127.0.0.1','::1']
 
 # 맵박스 토큰
 MAPBOX_TOKEN = config.get('mapbox','MAPBOX_TOKEN')
+
+# 리플렛 설정
+LEAFLET_CONFIG = {
+    # conf here
+    'TILES': [('세부 지형도', '//api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{{z}}/{{x}}/{{y}}?access_token={0}'.format(MAPBOX_TOKEN), {'attribution': 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>', 'minZoom': 13 ,'maxZoom': 16}),
+                ('위성지도', '//api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{{z}}/{{x}}/{{y}}?access_token={0}'.format(MAPBOX_TOKEN), {'attribution': 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>', 'minZoom': 9 ,'maxZoom': 16}),
+('전체 지형도', '//api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{{z}}/{{x}}/{{y}}?access_token={0}'.format(MAPBOX_TOKEN), {'attribution': 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>', 'minZoom': 4 ,'maxZoom': 18}),
+              ],
+}
