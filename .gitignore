@@ -91,5 +91,8 @@ ENV/
 
 # django 셋팅 파일
 settings.ini
+migrations/
 # pycharm 셋팅
 .idea/
+
+djangomapbox/mapbox/data/
