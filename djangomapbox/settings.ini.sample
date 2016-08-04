@@ -26,4 +26,4 @@ POST: <포트:3306>
 
 [mapbox]
 
-TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+MAPBOX_TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
