@@ -96,3 +96,4 @@ migrations/
 .idea/
 
 djangomapbox/mapbox/data/
+djangomapbox/mapbox/migrations/ 제거할 예정
